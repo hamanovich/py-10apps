@@ -11,13 +11,13 @@ def print_header():
 
 
 def run_event_loop():
-    cmd = None
+    cmd = 'EMPTY'
     journal_name = input('Name your journey (or `default`): ') or 'default'
     journal_data = journal.load(journal_name)
 
     print('What you want to do with your journal?')
 
-    while cmd != 'x':
+    while cmd != 'x' and cmd:
         cmd = input('[L]ist entries, [A]dd an entry, E[x]it: ')
         cmd = cmd.lower().strip()
 
@@ -25,7 +25,7 @@ def run_event_loop():
             list_entries(journal_data)
         elif cmd == 'a':
             add_entry(journal_data)
-        elif cmd != 'x':
+        elif cmd != 'x' and cmd:
             print('Sorry, we don\'t understand \'{}\''.format(cmd))
 
     print('Done, goodbye!')
@@ -36,7 +36,7 @@ def list_entries(data):
     print('Your journal entries:')
     entries = reversed(data)
     for i, entry in enumerate(entries):
-        print('* [{}] {}'.format(i + 1, entry))
+        print('[{}] {}'.format(i + 1, entry))
 
 
 def add_entry(data):
@@ -44,4 +44,5 @@ def add_entry(data):
     journal.add_entry(text, data)
 
 
-main()
+if __name__ == '__main__':
+    main()
