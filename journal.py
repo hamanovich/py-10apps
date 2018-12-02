@@ -31,10 +31,17 @@ def save(name, journal_data):
         for entry in journal_data:
             fout.write(entry + '\n')
 
+def get_or_create_output_folder():
+    full_path = os.path.join(os.path.dirname(__file__), 'journals')
+    if not os.path.exists(full_path) or not os.path.isdir(full_path):
+        print('Creating new directory at {}'.format(full_path))
+        os.mkdir(full_path)
+
+    return full_path
+
 
 def get_full_pathname(name):
-    filename = os.path.abspath(os.path.join('.', 'journals', name + '.txt'))
-    return filename
+    return os.path.join(get_or_create_output_folder(), name + '.txt')
 
 
 def add_entry(text, journal_data):

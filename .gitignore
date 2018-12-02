@@ -1,3 +1,4 @@
 .vscode
 journals/*.txt
+cats
 __pycache__

@@ -13,7 +13,7 @@ def print_header():
 
 def run_event_loop():
     cmd = 'EMPTY'
-    journal_name = input('Name your journey (or `default`): ') or 'default'
+    journal_name = input('Name your journal (or `default`): ') or 'default'
     journal_data = journal.load(journal_name)
 
     print('What you want to do with your journal?')

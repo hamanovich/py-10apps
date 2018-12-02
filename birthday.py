@@ -33,9 +33,9 @@ def print_birthday_information(days):
 
 def main():
     print_header()
-    bday = get_birthday_from_user()
+    birthday = get_birthday_from_user()
     now = datetime.datetime.now()
-    number_of_days = compute_days_between_dates(bday, now)
+    number_of_days = compute_days_between_dates(birthday, now)
     print_birthday_information(number_of_days)
 
 
