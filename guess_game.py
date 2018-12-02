@@ -1,7 +1,7 @@
 import random
 
 print('GUESS THE NUMBER GAME APP')
-print()
+print('============')
 
 the_number = random.randint(0, 100)
 guess = -1

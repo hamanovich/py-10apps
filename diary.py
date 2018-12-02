@@ -8,6 +8,7 @@ def main():
 
 def print_header():
     print('JOURNAL APP')
+    print('============')
 
 
 def run_event_loop():

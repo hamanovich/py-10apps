@@ -3,6 +3,7 @@ import datetime
 
 def print_header():
     print('BIRTHDAY APP')
+    print('============')
 
 
 def get_birthday_from_user():
