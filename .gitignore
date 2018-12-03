@@ -1,4 +1,4 @@
 .vscode
-journals/*.txt
+04_journal/journals/*.txt
 cats
 __pycache__

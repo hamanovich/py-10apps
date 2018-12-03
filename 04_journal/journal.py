@@ -1,3 +1,4 @@
+
 '''
 This is a journal module.
 '''
@@ -30,6 +31,7 @@ def save(name, journal_data):
     with open(filename, 'w') as fout:
         for entry in journal_data:
             fout.write(entry + '\n')
+
 
 def get_or_create_output_folder():
     full_path = os.path.join(os.path.dirname(__file__), 'journals')
