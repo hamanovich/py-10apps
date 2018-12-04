@@ -71,8 +71,7 @@ def search_file(filename, search_text):
         for line in fin:
             line_num += 1
             if line.lower().find(search_text) >= 0:
-                m = SearchResult(line=line_num, file=filename, text=line)
-                yield m
+                yield SearchResult(line=line_num, file=filename, text=line)
 
 
 if __name__ == "__main__":
